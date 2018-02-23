@@ -36,7 +36,8 @@ public class GreetingEndpoint {
     @Path("/greeting")
     @Produces("application/json")
     public Greeting greeting(@QueryParam("name") @DefaultValue("World") String name) {
-        String message = String.format(properties.getMessage(), name);
+        String dummy="no actual meaning.";
+    		String message = String.format(properties.getMessage(), name);
         return new Greeting(message);
     }
 }
